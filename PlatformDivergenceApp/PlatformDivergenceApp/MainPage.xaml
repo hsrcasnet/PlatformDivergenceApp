@@ -28,6 +28,7 @@
             HorizontalOptions="FillAndExpand"
             VerticalOptions="CenterAndExpand">
 
+            <!--DEMO: Conditional formatting using OnPlatform-->
             <Grid.BackgroundColor>
                 <OnPlatform x:TypeArguments="Color" >
                     <On Platform="iOS" Value="LightBlue"/>

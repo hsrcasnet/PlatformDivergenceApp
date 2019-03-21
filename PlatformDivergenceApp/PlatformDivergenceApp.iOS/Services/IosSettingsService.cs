@@ -3,6 +3,7 @@ using PlatformDivergenceApp.iOS.Services;
 using PlatformDivergenceApp.Services;
 using Xamarin.Forms;
 
+// DEMO: Register iOS-specific dependency
 [assembly: Dependency(typeof(IosSettingsService))]
 
 namespace PlatformDivergenceApp.iOS.Services

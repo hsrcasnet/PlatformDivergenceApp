@@ -4,6 +4,7 @@ using PlatformDivergenceApp.Services;
 using Xamarin.Forms;
 using Application = Android.App.Application;
 
+// DEMO: Register Android-specific dependency
 [assembly: Dependency(typeof(AndroidSettingsService))]
 
 namespace PlatformDivergenceApp.Droid.Services

@@ -12,6 +12,7 @@ namespace PlatformDivergenceApp
         {
             this.InitializeComponent();
 
+            // DEMO: Conditional formatting using RuntimePlatform
             switch (Device.RuntimePlatform)
             {
                 case Device.iOS:
@@ -24,6 +25,7 @@ namespace PlatformDivergenceApp
                     break;
             }
 
+            // DEMO: Resolve ISettingsService using Xamarin.Forms.DependencyService
             this.settingsService = DependencyService.Get<ISettingsService>();
         }
 
