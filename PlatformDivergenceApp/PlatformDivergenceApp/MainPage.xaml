@@ -26,8 +26,15 @@
             Margin="0"
             ColumnSpacing="0"
             HorizontalOptions="FillAndExpand"
-            VerticalOptions="CenterAndExpand" 
-            BackgroundColor="LightSkyBlue">
+            VerticalOptions="CenterAndExpand">
+
+            <Grid.BackgroundColor>
+                <OnPlatform x:TypeArguments="Color" >
+                    <On Platform="iOS" Value="LightBlue"/>
+                    <On Platform="Android" Value="LightGreen"/>
+                </OnPlatform>
+            </Grid.BackgroundColor>
+
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
@@ -47,7 +54,7 @@
                 Text="Reset" 
                 Clicked="OnResetButtonClicked"/>
         </Grid>
-   
+
     </Grid>
 
 </ContentPage>

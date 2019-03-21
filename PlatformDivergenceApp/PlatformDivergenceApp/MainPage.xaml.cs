@@ -12,6 +12,18 @@ namespace PlatformDivergenceApp
         {
             this.InitializeComponent();
 
+            switch (Device.RuntimePlatform)
+            {
+                case Device.iOS:
+                    this.SettingsEntry.Placeholder = "Enter iOS Settings...";
+                    this.SettingsEntry.PlaceholderColor = Color.Blue;
+                    break;
+                case Device.Android:
+                    this.SettingsEntry.Placeholder = "Enter Android Settings...";
+                    this.SettingsEntry.PlaceholderColor = Color.Green;
+                    break;
+            }
+
             this.settingsService = DependencyService.Get<ISettingsService>();
         }
 
