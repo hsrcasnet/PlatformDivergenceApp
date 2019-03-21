@@ -1,17 +1,34 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using PlatformDivergenceApp.Services;
 using Xamarin.Forms;
 
 namespace PlatformDivergenceApp
 {
     public partial class MainPage : ContentPage
     {
+        private readonly ISettingsService settingsService;
+
         public MainPage()
         {
-            InitializeComponent();
+            this.InitializeComponent();
+
+            this.settingsService = DependencyService.Get<ISettingsService>();
+        }
+
+        private void OnGetValueButtonClicked(object sender, EventArgs e)
+        {
+            this.SettingsEntry.Text = this.settingsService.GetValue("SettingsKey");
+        }
+
+        private void OnSetValueButtonClicked(object sender, EventArgs e)
+        {
+            this.settingsService.SetValue("SettingsKey", this.SettingsEntry.Text);
+        }
+
+        private void OnResetButtonClicked(object sender, EventArgs e)
+        {
+            this.settingsService.Reset("SettingsKey");
+            this.SettingsEntry.Text = this.settingsService.GetValue("SettingsKey");
         }
     }
 }

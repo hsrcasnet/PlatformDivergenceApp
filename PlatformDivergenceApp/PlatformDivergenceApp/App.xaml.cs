@@ -1,17 +1,17 @@
-﻿using System;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
+
 namespace PlatformDivergenceApp
 {
     public partial class App : Application
     {
         public App()
         {
-            InitializeComponent();
+            this.InitializeComponent();
 
-            MainPage = new MainPage();
+            this.MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()

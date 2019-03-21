@@ -2,13 +2,52 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:PlatformDivergenceApp"
-             x:Class="PlatformDivergenceApp.MainPage">
+             x:Class="PlatformDivergenceApp.MainPage"
+             Title="Platform Divergence App">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Entry 
+            Grid.Row="0"
+            x:Name="SettingsEntry"
+            Placeholder="Empty"
+            Margin="10"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="CenterAndExpand" 
+            BackgroundColor="LightGray"/>
+
+        <Grid 
+            Grid.Row="1"
+            Padding="0"
+            Margin="0"
+            ColumnSpacing="0"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="CenterAndExpand" 
+            BackgroundColor="LightSkyBlue">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button 
+                Grid.Column="0"
+                Text="GetValue" 
+                Clicked="OnGetValueButtonClicked"/>
+            <Button 
+                Grid.Column="1"
+                Text="SetValue" 
+                Clicked="OnSetValueButtonClicked"/>
+            <Button 
+                Grid.Column="2"
+                Text="Reset" 
+                Clicked="OnResetButtonClicked"/>
+        </Grid>
+   
+    </Grid>
 
 </ContentPage>
