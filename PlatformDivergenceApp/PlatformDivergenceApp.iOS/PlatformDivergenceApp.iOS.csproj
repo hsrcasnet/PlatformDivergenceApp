@@ -159,4 +159,5 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />
+  <Import Project="..\PlatformDivergenceApp.Shared\PlatformDivergenceApp.Shared.projitems" Label="Shared" />
 </Project>

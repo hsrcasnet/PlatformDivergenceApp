@@ -9,7 +9,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlatformDivergenceApp.iOS",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlatformDivergenceApp", "PlatformDivergenceApp\PlatformDivergenceApp\PlatformDivergenceApp.csproj", "{7E4377E8-A54F-4456-9595-9A604EDB717E}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "PlatformDivergenceApp.Shared", "PlatformDivergenceApp\PlatformDivergenceApp.Shared\PlatformDivergenceApp.Shared.shproj", "{55FC26F8-3B55-4B8F-AD8B-E3150088D356}"
+EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		PlatformDivergenceApp\PlatformDivergenceApp.Shared\PlatformDivergenceApp.Shared.projitems*{13145b4d-4030-47a0-8c3b-24e590b22da3}*SharedItemsImports = 4
+		PlatformDivergenceApp\PlatformDivergenceApp.Shared\PlatformDivergenceApp.Shared.projitems*{55fc26f8-3b55-4b8f-ad8b-e3150088d356}*SharedItemsImports = 13
+		PlatformDivergenceApp\PlatformDivergenceApp.Shared\PlatformDivergenceApp.Shared.projitems*{bf4f8fdc-6a4f-4c1a-a99c-7b477900be33}*SharedItemsImports = 4
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU
 		Ad-Hoc|iPhone = Ad-Hoc|iPhone
