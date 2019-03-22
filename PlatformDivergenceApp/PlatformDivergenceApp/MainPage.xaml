@@ -30,7 +30,7 @@
 
             <!--DEMO: Conditional formatting using OnPlatform-->
             <Grid.BackgroundColor>
-                <OnPlatform x:TypeArguments="Color" >
+                <OnPlatform x:TypeArguments="Color" Default="Magenta">
                     <On Platform="iOS" Value="LightBlue"/>
                     <On Platform="Android" Value="LightGreen"/>
                 </OnPlatform>
