@@ -1,4 +1,5 @@
 ﻿using Foundation;
+using PlatformDivergenceApp.Services;
 using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
@@ -21,7 +22,8 @@ namespace PlatformDivergenceApp.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             Forms.Init();
-            this.LoadApplication(new App());
+            var databasePath = DatabaseAccess.GetDatabaseFilePath();
+            this.LoadApplication(new App(databasePath));
 
             return base.FinishedLaunching(app, options);
         }

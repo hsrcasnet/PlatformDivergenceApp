@@ -1,6 +1,7 @@
 ﻿using Android.App;
 using Android.Content.PM;
 using Android.OS;
+using PlatformDivergenceApp.Services;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 
@@ -16,7 +17,8 @@ namespace PlatformDivergenceApp.Droid
 
             base.OnCreate(savedInstanceState);
             Forms.Init(this, savedInstanceState);
-            this.LoadApplication(new App());
+            var databasePath = DatabaseAccess.GetDatabaseFilePath();
+            this.LoadApplication(new App(databasePath));
         }
     }
 }
