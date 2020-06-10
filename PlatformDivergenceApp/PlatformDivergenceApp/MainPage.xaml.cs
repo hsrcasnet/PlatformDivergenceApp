@@ -8,9 +8,11 @@ namespace PlatformDivergenceApp
     {
         private readonly ISettingsService settingsService;
 
-        public MainPage()
+        public MainPage(string databasePath)
         {
             this.InitializeComponent();
+
+            this.DatabasePathLabel.Text = databasePath;
 
             // DEMO: Conditional formatting using RuntimePlatform
             switch (Device.RuntimePlatform)

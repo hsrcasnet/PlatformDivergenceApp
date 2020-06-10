@@ -7,11 +7,11 @@ namespace PlatformDivergenceApp
 {
     public partial class App : Application
     {
-        public App()
+        public App(string databasePath)
         {
             this.InitializeComponent();
 
-            this.MainPage = new NavigationPage(new MainPage());
+            this.MainPage = new NavigationPage(new MainPage(databasePath));
         }
 
         protected override void OnStart()

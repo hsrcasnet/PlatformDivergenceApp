@@ -1,61 +1,76 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:PlatformDivergenceApp"
-             x:Class="PlatformDivergenceApp.MainPage"
-             Title="Platform Divergence App">
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:PlatformDivergenceApp"
+    x:Class="PlatformDivergenceApp.MainPage"
+    Title="Platform Divergence App">
 
-    <Grid>
+    <Grid RowSpacing="0">
         <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
+            <RowDefinition Height="100" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="2*" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
-        <Entry 
+        <!--  DEMO: Get database path from shared code (conditional compilation)  -->
+        <Label
             Grid.Row="0"
+            Text="DatabaseAccess.GetDatabaseFilePath:"
+            HorizontalTextAlignment="Start"
+            VerticalTextAlignment="Start"
+            BackgroundColor="Yellow" />
+        <Label
+            Grid.Row="1"
+            x:Name="DatabasePathLabel"
+            HorizontalTextAlignment="Start"
+            VerticalTextAlignment="Center"
+            BackgroundColor="LightGoldenrodYellow" />
+
+        <Entry
+            Grid.Row="2"
             x:Name="SettingsEntry"
             Placeholder="Empty"
             Margin="10"
             HorizontalOptions="FillAndExpand"
-            VerticalOptions="CenterAndExpand" 
-            BackgroundColor="LightGray"/>
+            VerticalOptions="CenterAndExpand"
+            BackgroundColor="LightGray" />
 
-        <Grid 
-            Grid.Row="1"
+        <Grid
+            Grid.Row="3"
             Padding="0"
             Margin="0"
             ColumnSpacing="0"
             HorizontalOptions="FillAndExpand"
             VerticalOptions="CenterAndExpand">
 
-            <!--DEMO: Conditional formatting using OnPlatform-->
+            <!--  DEMO: Conditional formatting using OnPlatform  -->
             <Grid.BackgroundColor>
                 <OnPlatform x:TypeArguments="Color" Default="Magenta">
-                    <On Platform="iOS" Value="LightBlue"/>
-                    <On Platform="Android" Value="LightGreen"/>
+                    <On Platform="iOS" Value="LightBlue" />
+                    <On Platform="Android" Value="LightGreen" />
                 </OnPlatform>
             </Grid.BackgroundColor>
 
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
-            <Button 
+            <Button
                 Grid.Column="0"
-                Text="GetValue" 
-                Clicked="OnGetValueButtonClicked"/>
-            <Button 
+                Text="GetValue"
+                Clicked="OnGetValueButtonClicked" />
+            <Button
                 Grid.Column="1"
-                Text="SetValue" 
-                Clicked="OnSetValueButtonClicked"/>
-            <Button 
+                Text="SetValue"
+                Clicked="OnSetValueButtonClicked" />
+            <Button
                 Grid.Column="2"
-                Text="Reset" 
-                Clicked="OnResetButtonClicked"/>
+                Text="Reset"
+                Clicked="OnResetButtonClicked" />
         </Grid>
-
     </Grid>
-
 </ContentPage>
