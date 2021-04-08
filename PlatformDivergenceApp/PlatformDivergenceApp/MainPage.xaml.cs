@@ -18,10 +18,12 @@ namespace PlatformDivergenceApp
             switch (Device.RuntimePlatform)
             {
                 case Device.iOS:
+                    this.Title = "Platform Divergence @ iOS";
                     this.SettingsEntry.Placeholder = "Enter iOS Settings...";
                     this.SettingsEntry.PlaceholderColor = Color.Blue;
                     break;
                 case Device.Android:
+                    this.Title = "Platform Divergence @ Android";
                     this.SettingsEntry.Placeholder = "Enter Android Settings...";
                     this.SettingsEntry.PlaceholderColor = Color.Green;
                     break;

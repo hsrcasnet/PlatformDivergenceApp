@@ -1,9 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
+    x:Class="PlatformDivergenceApp.MainPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:PlatformDivergenceApp"
-    x:Class="PlatformDivergenceApp.MainPage"
     Title="Platform Divergence App">
 
     <Grid RowSpacing="0">
@@ -17,30 +16,32 @@
         <!--  DEMO: Get database path from shared code (conditional compilation)  -->
         <Label
             Grid.Row="0"
+            Padding="10"
+            BackgroundColor="Yellow"
             Text="DatabaseAccess.GetDatabaseFilePath:"
             HorizontalTextAlignment="Start"
-            VerticalTextAlignment="Start"
-            BackgroundColor="Yellow" />
+            VerticalTextAlignment="Start" />
         <Label
-            Grid.Row="1"
             x:Name="DatabasePathLabel"
+            Grid.Row="1"
+            Padding="10"
+            BackgroundColor="LightGoldenrodYellow"
             HorizontalTextAlignment="Start"
-            VerticalTextAlignment="Center"
-            BackgroundColor="LightGoldenrodYellow" />
+            VerticalTextAlignment="Center" />
 
         <Entry
-            Grid.Row="2"
             x:Name="SettingsEntry"
-            Placeholder="Empty"
+            Grid.Row="2"
             Margin="10"
+            BackgroundColor="LightGray"
+            Placeholder="Empty"
             HorizontalOptions="FillAndExpand"
-            VerticalOptions="CenterAndExpand"
-            BackgroundColor="LightGray" />
+            VerticalOptions="CenterAndExpand" />
 
         <Grid
             Grid.Row="3"
-            Padding="0"
             Margin="0"
+            Padding="0"
             ColumnSpacing="0"
             HorizontalOptions="FillAndExpand"
             VerticalOptions="CenterAndExpand">
@@ -61,16 +62,16 @@
 
             <Button
                 Grid.Column="0"
-                Text="GetValue"
-                Clicked="OnGetValueButtonClicked" />
+                Clicked="OnGetValueButtonClicked"
+                Text="GetValue" />
             <Button
                 Grid.Column="1"
-                Text="SetValue"
-                Clicked="OnSetValueButtonClicked" />
+                Clicked="OnSetValueButtonClicked"
+                Text="SetValue" />
             <Button
                 Grid.Column="2"
-                Text="Reset"
-                Clicked="OnResetButtonClicked" />
+                Clicked="OnResetButtonClicked"
+                Text="Reset" />
         </Grid>
     </Grid>
 </ContentPage>
