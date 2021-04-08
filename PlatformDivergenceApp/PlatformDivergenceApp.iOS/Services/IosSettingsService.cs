@@ -13,6 +13,10 @@ namespace PlatformDivergenceApp.iOS.Services
     /// </summary>
     public class IosSettingsService : SettingsServiceBase
     {
+        public IosSettingsService()
+        {
+        }
+
         public override string GetValue(string key)
         {
             using (var defaults = NSUserDefaults.StandardUserDefaults)

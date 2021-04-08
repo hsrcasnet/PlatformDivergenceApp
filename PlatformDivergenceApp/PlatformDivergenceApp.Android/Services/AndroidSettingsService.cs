@@ -14,6 +14,10 @@ namespace PlatformDivergenceApp.Droid.Services
     /// </summary>
     public class AndroidSettingsService : SettingsServiceBase
     {
+        public AndroidSettingsService()
+        {
+        }
+
         public override string GetValue(string key)
         {
             using (var sharedPreferences = PreferenceManager.GetDefaultSharedPreferences(Application.Context))
