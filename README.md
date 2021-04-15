@@ -1,2 +1,2 @@
 # PlatformDivergenceApp
- Dealing with Multiple Platforms in Xamarin
+ Dealing with platform divergency in Xamarin
