@@ -1,8 +1,6 @@
 ﻿using Foundation;
 using PlatformDivergenceApp.Services;
 using UIKit;
-using Xamarin.Forms;
-using Xamarin.Forms.Platform.iOS;
 
 namespace PlatformDivergenceApp.iOS
 {
@@ -10,7 +8,7 @@ namespace PlatformDivergenceApp.iOS
     // User Interface of the application, as well as listening (and optionally responding) to 
     // application events from iOS.
     [Register("AppDelegate")]
-    public partial class AppDelegate : FormsApplicationDelegate
+    public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
     {
         //
         // This method is invoked when the application has loaded and is ready to run. In this 
@@ -21,8 +19,9 @@ namespace PlatformDivergenceApp.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
-            Forms.Init();
             var databasePath = DatabaseAccess.GetDatabaseFilePath();
+
+            global::Xamarin.Forms.Forms.Init();
             this.LoadApplication(new App(databasePath));
 
             return base.FinishedLaunching(app, options);
